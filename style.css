@@ -1,0 +1,401 @@
+:root {
+    --mainFont: "Menlo", "Consolas", "JetBrains Mono", "Monaco", monospace;
+    --bg-color: #FFFFFF;
+    --text-color: #111111;
+    --gray: #808080;
+    --btn-color: #000000;
+    --btn-bg: transparent;
+    --border: #000;
+    --darkblue: #03386e;
+}
+
+[data-theme="dark"] {
+    --bg-color: #000000;
+    --text-color: #f0f0f0;
+    --gray: #9a9a9a;
+    --btn-color: #FFFFFF;
+    --btn-bg: transparent;
+    --border: #FFF;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--mainFont);
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+    margin: 0;
+    padding: 24px 20px;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.main,
+.footer {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.profile-section {
+    width: 100%;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 170px;
+    padding: 0 120px;
+}
+
+.img {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.img img {
+    display: block;
+    width: clamp(130px, 22vw, 170px);
+    max-width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+.button-group {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.icon-btn {
+    background: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    padding: 8px;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.icon-btn:hover {
+    opacity: 0.8;
+}
+
+.icon-btn:active {
+    transform: scale(0.96);
+}
+
+.fb-btn {
+    text-decoration: none;
+}
+
+.material-symbols-outlined,
+.fa-facebook {
+    font-size: 19px;
+}
+
+.prfDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.prfDetails h4 {
+    margin: 15px 0 4px;
+    font-size: clamp(20px, 4vw, 22px);
+    color: var(--text-color);
+}
+
+.prfDetails p {
+    margin: 0;
+    font-size: clamp(14px, 3vw, 16px);
+    color: var(--text-color);
+}
+
+.locate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    color: var(--gray);
+    text-align: center;
+}
+
+.locate p {
+    margin: 0 0 0 5px;
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.bio {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-color);
+    margin-top: 18px;
+}
+
+.myBio {
+    margin: 0;
+    width: 100%;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+.myBio a {
+    color: var(--text-color);
+}
+
+.myBio a:hover {
+    text-decoration: none;
+}
+
+.techSkills > p,
+.Projects > p {
+    margin-top: 40px;
+    margin-bottom: 14px;
+    color: var(--text-color);
+}
+
+.tech {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.tech a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech img {
+    display: block;
+    margin: 0;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.tech img:hover {
+    transform: translateY(-2px);
+}
+
+hr {
+    border: none;
+    height: 1.5px;
+    background-color: var(--darkblue);
+}
+
+.Projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Projects h5{
+    font-size: 20px;
+}
+
+.myProj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: var(--darkblue) 1px solid;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.proj:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.proj img {
+    border-radius: 10px;
+    width: 450px;
+}
+
+.btn-view {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.btn-view a{
+    color: var(--darkblue);
+    text-decoration: none;
+}
+
+footer {
+    margin: 50px 0 0;
+    padding: 0;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    body {
+        padding: 22px 18px;
+    }
+
+    .main,
+    .footer {
+        max-width: 620px;
+    }
+
+    .header {
+        min-height: 155px;
+        padding: 0 110px;
+    }
+
+    .techSkills > p,
+    .Projects > p {
+        margin-top: 34px;
+    }
+
+    .proj {
+        padding: 15px;
+        width: 320px;
+    }
+
+    .proj img {
+        width: 260px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+    body {
+        padding: 18px 16px;
+    }
+
+    .header {
+        min-height: auto;
+        padding: 52px 0 0;
+    }
+
+    .button-group {
+        top: 0;
+        right: 0;
+    }
+
+    .img img {
+        width: 140px;
+    }
+
+    .bio {
+        margin-top: 16px;
+    }
+
+    .myBio {
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .techSkills > p,
+    .Projects > p {
+        margin-top: 30px;
+    }
+
+    .tech {
+        gap: 16px;
+    }
+
+    .tech img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .proj {
+        padding: 15px;
+        width: 250px;
+    }
+
+    .proj img {
+        width: 200px;
+    }
+
+    footer {
+        margin-top: 40px;
+        font-size: 14px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    body {
+        padding: 14px 12px;
+    }
+
+    .button-group {
+        gap: 2px;
+    }
+
+    .icon-btn {
+        min-width: 34px;
+        min-height: 34px;
+        padding: 6px;
+    }
+
+    .img img {
+        width: 125px;
+    }
+
+    .locate {
+        align-items: flex-start;
+    }
+}
+
+.msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.msg p {
+    font-size: 20px;
+}
