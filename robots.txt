@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://jonh-aries-portfolio.vercel.app/sitemap.xml
