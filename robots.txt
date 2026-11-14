@@ -1,5 +1,4 @@
-
-User-agent: *
+User-agent: OAI-SearchBot
 Allow: /
 
 Sitemap: https://jonh-aries-portfolio.vercel.app/sitemap.xml
