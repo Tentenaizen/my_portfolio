@@ -38,8 +38,8 @@ async function sharePage() {
     if (navigator.share) {
         try {
             await navigator.share({
-                title: 'Aries - Profile',
-                text: 'Check out my profile!',
+                title: 'Jonh Aries - Portfolio',
+                text: 'Check out my portfolio!',
                 url: url
             });
         } catch (error) {
@@ -48,7 +48,7 @@ async function sharePage() {
     } else if (navigator.clipboard) {
         try {
             await navigator.clipboard.writeText(url);
-            alert('Link copied to clipboard! ✅');
+            alert('Link copied to clipboard!');
         } catch (error) {
             alert('Unable to copy the link.');
         }
